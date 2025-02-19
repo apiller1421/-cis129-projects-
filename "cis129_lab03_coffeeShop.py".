@@ -1,0 +1,29 @@
+# File: cis129_lab03_coffeeShop.py
+# Author: [Alex Piller]
+# Date: [2/18/2025]
+# Description: This program calculates the total cost of a coffee and muffin purchase, including tax.
+
+# Define the prices
+COFFEE_PRICE = 5.00
+MUFFIN_PRICE = 4.00
+TAX_RATE = 0.06  # 6% tax
+
+# Get user input
+num_coffees = int(input("1"))
+num_muffins = int(input("2"))
+
+# Calculate subtotal
+coffee_total = num_coffees * COFFEE_PRICE
+muffin_total = num_muffins * MUFFIN_PRICE
+subtotal = coffee_total + muffin_total
+
+# Calculate tax and total
+tax = subtotal * TAX_RATE
+total = subtotal + tax
+
+# Display the formatted receipt
+print("         My Coffee and Muffin Shop       ")
+print(f"{num_coffees} Coffee at ${COFFEE_PRICE} each: ${coffee_total:.2f}")
+print(f"{num_muffins} Muffins at ${MUFFIN_PRICE} each: ${muffin_total:.2f}")
+print(f"6% tax: ${tax:.2f}")
+print(f"Total: ${total:.2f}")
